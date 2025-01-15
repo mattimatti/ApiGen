@@ -8,6 +8,7 @@ use ApiGen\Info\EnumInfo;
 use ApiGen\Info\FunctionInfo;
 use ApiGen\Info\InterfaceInfo;
 use ApiGen\Info\NameInfo;
+use ApiGen\Info\DescriptionInfo;
 use ApiGen\Info\TraitInfo;
 
 
