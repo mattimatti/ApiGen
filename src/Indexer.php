@@ -12,6 +12,7 @@ use ApiGen\Info\FunctionInfo;
 use ApiGen\Info\InterfaceInfo;
 use ApiGen\Info\MissingInfo;
 use ApiGen\Info\NameInfo;
+use ApiGen\Info\DescriptionInfo;
 use ApiGen\Info\TraitInfo;
 
 use function array_filter;
@@ -65,7 +66,10 @@ class Indexer
 			return;
 		}
 
-		$info = new NamespaceIndex(new NameInfo($namespace, $namespaceLower), $primary, $deprecated);
+		// Force adding this description
+		$description = new DescriptionInfo('Bella <strong>mattimatti</strong>');
+
+		$info = new NamespaceIndex(new NameInfo($namespace, $namespaceLower), $primary, $deprecated, $description);
 
 		if ($namespaceLower !== '') {
 			$primary = $primary && $info->name->namespaceLower !== '';
