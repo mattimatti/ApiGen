@@ -39,6 +39,7 @@ class NamespaceIndex implements ElementInfo
 		public NameInfo $name,
 		public bool $primary,
 		public bool $deprecated,
+		public DescriptionInfo $description,
 	) {
 	}
 
