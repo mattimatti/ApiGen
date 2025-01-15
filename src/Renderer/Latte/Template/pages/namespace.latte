@@ -7,6 +7,9 @@
 	{block content}
 		<h1>{if $namespace->name->full !== ''}Namespace {include namespaceLinks, $namespace}{else}No namespace{/if}</h1>
 
+		<div>{if $namespace->description !== ''}{$namespace->description}</div>
+			
+
 		{embed elementSummary}
 			{block elementSummaryContent}
 				{include elementSummaryGroup, heading: 'Classes', elements: $namespace->class, onlyPrimary: $namespace->primary}
